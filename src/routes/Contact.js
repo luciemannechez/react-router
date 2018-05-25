@@ -4,7 +4,7 @@ import {Route, NavLink} from 'react-router-dom';
 export function SubRoute ({match, location}) {
     return (
         <div>
-            <h1>{`${match.params.name} sub route`}</h1>
+            <h1>{`${location.state.contact.name} sub route`}</h1>
             <div>
                 {location.state.contact.info}
             </div>
@@ -35,7 +35,7 @@ export const Contact = ({match}) => {
                     return ( contacts.map((contact) =>
                         <NavLink key={contact.id}
                                  to={{
-                                     pathname: `/contact/${contact.name}`,
+                                     pathname: `/contact/${contact.id}`,
                                      state: {
                                         contact: contact
                                     }

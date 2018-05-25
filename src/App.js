@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter,Route,Switch,NavLink} from 'react-router-dom'
+import {BrowserRouter,Route,Switch,NavLink,Link} from 'react-router-dom'
 import {Home} from "./routes/Home";
 import {Contact} from "./routes/Contact";
 import {About} from "./routes/About";
@@ -34,6 +34,10 @@ class App extends Component {
                       <Route path="/about" component={About}/>
                   </Switch>
               </div>
+              <footer>
+                  <h1>Footer</h1>
+                  <Link to="/about">About</Link>
+              </footer>
           </div>
       </BrowserRouter>
     );
